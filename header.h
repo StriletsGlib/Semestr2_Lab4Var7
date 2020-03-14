@@ -33,6 +33,9 @@ class rectangle{
     width=a.getWidth(false);
     return *this;
   };
+  int operator +(rectangle a){
+    return gets(false) + a.gets(false);
+  };
 protected:
   int width, length, s = 0, p = 0;
 };
