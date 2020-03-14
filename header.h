@@ -10,7 +10,7 @@ class rectangle{
   int getLength(bool ou = true);
   int gets(bool ou = true);
   int getp(bool ou = true);
-  void countS();
+  void countS(bool ou = true);
   void countP();
   rectangle(){
     width = 10;
@@ -33,7 +33,9 @@ class rectangle{
     width=a.getWidth(false);
     return *this;
   };
-  int operator +(rectangle a){
+  int operator +(rectangle &a){
+    countS(false);
+    a.countS(false);
     return gets(false) + a.gets(false);
   };
 protected:
