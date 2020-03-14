@@ -18,6 +18,7 @@ int main() {
   collRent c1;
   c1 = colFirts;
   c1.getInfo();
+  cout<<"Sum of S of first end second rectangle = "<<first+second<<"\nSum of S of first and second collored rectangle = "<<colFirts+colSecond;
   return 0;
 }
 
