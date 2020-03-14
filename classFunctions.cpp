@@ -18,9 +18,9 @@ void rectangle::setWidth(int w){width = w;}
     if(ou){cout<<"Perimeter of a rectangle = "<<p<<endl;}
     return p;
   }
-  void rectangle::countS(){
+  void rectangle::countS(bool ou){
     setS(width*length);
-    gets();
+    gets(ou);
   }
   void rectangle::countP(){
     rectangle::setP((width+length)*2);
