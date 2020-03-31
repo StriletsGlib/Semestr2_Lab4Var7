@@ -1,53 +1,53 @@
 #include "header.h"
 using namespace std;
 void rectangle::setWidth(int w){width = w;}
-  void rectangle::setLength(int l){length = l;}
-  int rectangle::getWidth(bool ou){
+void rectangle::setLength(int l){length = l;}
+int rectangle::getWidth(bool ou){
     if(ou){cout<<"Width of the rectangle = "<<width<<endl;}
     return width;
-  }
-  int rectangle::getLength(bool ou){
+}
+int rectangle::getLength(bool ou){
     if(ou){cout<<"Length of the rectangle = "<<length<<endl;}
     return length;
-    }
-  int rectangle::gets(bool ou){
+}
+int rectangle::gets(bool ou){
     if(ou){cout<<"Area of rectangle = "<<s<<endl;}
     return s;
-  }
-  int rectangle::getp(bool ou){
+}
+int rectangle::getp(bool ou){
     if(ou){cout<<"Perimeter of a rectangle = "<<p<<endl;}
     return p;
-  }
-  void rectangle::countS(bool ou){
+}
+void rectangle::countS(){
     setS(width*length);
-    gets(ou);
-  }
-  void rectangle::countP(){
+    gets();
+}
+void rectangle::countP(){
     rectangle::setP((width+length)*2);
     getp();
-    }
-  
-  void rectangle::getInfo(){
+}
+
+void rectangle::getInfo(){
     getLength();
     getLength();
-  };
-  bool rectangle::testSq(){
+};
+bool rectangle::testSq(){
     if (width == length) cout<<endl<<"This is a square\n";
     else cout<<endl<<"This is NOT a square\n";
     return (width == length);
-  }
+}
 
-  string collRent::getCollor(bool ou){
+string collRent::getCollor(bool ou){
     if(ou){cout<<"Rectangle has collor: "<<collor<<endl;}
     return collor;
-  }
-  void collRent::setCollor(string c){
+}
+void collRent::setCollor(string c){
     collor = c;
-  }
+}
 
 
-  void rectangle::setP(int work){
+void rectangle::setP(int work){
     p = work;
-  };
-  void rectangle::setS(int work){
+};
+void rectangle::setS(int work){
     s = work;};
