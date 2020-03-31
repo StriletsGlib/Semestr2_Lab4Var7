@@ -10,7 +10,7 @@ class rectangle{
   int getLength(bool ou = true);
   int gets(bool ou = true);
   int getp(bool ou = true);
-  void countS(bool ou = true);
+  void countS();
   void countP();
   rectangle(){
     width = 10;
@@ -28,15 +28,12 @@ class rectangle{
   ~rectangle(){cout<<"\nRectangle dissapeared\n";}
   void getInfo();
   bool testSq();
+  friend ostream& operator <<(ostream& s, rectangle& a);
+  friend istream& operator >>(istream& s, rectangle& a);
   virtual rectangle& operator=(rectangle& a){
     length=a.getLength(false);
     width=a.getWidth(false);
     return *this;
-  };
-  int operator +(rectangle &a){
-    countS(false);
-    a.countS(false);
-    return gets(false) + a.gets(false);
   };
 protected:
   int width, length, s = 0, p = 0;
@@ -64,6 +61,8 @@ class collRent: public rectangle{
     collor=a.getCollor(false);
     return *this;
   };
+  friend ostream& operator <<(ostream& s, collRent& a);
+  friend istream& operator >>(istream& s, collRent& a);
   private:
   string collor;
 };

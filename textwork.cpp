@@ -1,6 +1,7 @@
 #include "header.h"
 void askQuestion(){
   cout<<"You have some commands. Every command consists of name of the command and c1, c2, n1, n2\n c is collored, n is not collored\n 1 and 2 are number of the rentangle\n You can change and get width and lenght of a rentagle using setW and setL and getW getL\n you can find S and P using findS and findP\n you can set collor using setC\n You can check collor using getC\n You can check is something is a square using s\n You can end the program using end\n";
+  cout<<"You can use << and >> to output/input basic information about rectangle or collored rectangle\n";
 };
 
 void taskCheck(rectangle &n1, rectangle &n2, collRent &c1, collRent &c2){
@@ -115,6 +116,30 @@ void taskCheck(rectangle &n1, rectangle &n2, collRent &c1, collRent &c2){
     };
     if(ans=="getCc2"){
       c2.getCollor();
+    };
+    if(ans=="<<n1"){
+      cout<<n1;
+    };
+    if(ans=="<<n2"){
+      cout<<n2;
+    };
+    if(ans=="<<c1"){
+      cout<<c1;
+    };
+    if(ans=="<<c2"){
+      cout<<c2;
+    };
+    if(ans==">>n1"){
+      cin>>n1;
+    };
+    if(ans==">>n2"){
+      cin>>n2;
+    };
+    if(ans==">>c1"){
+      cin>>c1;
+    };
+    if(ans==">>c2"){
+      cin>>c2;
     };
   }
 }
