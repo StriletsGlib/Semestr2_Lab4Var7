@@ -31,6 +31,7 @@ istream& operator >>(istream& s, collRent& a){
         transform>>l>>w;
         a.setLength(l);
         a.setWidth(w);
+        a.setCollor(col);
     }
     else {
         cout<<"Error: you can't put char or string into int";
